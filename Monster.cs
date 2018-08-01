@@ -37,7 +37,7 @@ namespace CthuluMon {
         public void Attack(Monster victim) {
             victim.HP -= (Constitution * 0.15 +(Strength*3));                        
         }
-
+        
         public void getInfo(){
             System.Console.WriteLine(Name);
             System.Console.WriteLine("Monster str: " + Strength);

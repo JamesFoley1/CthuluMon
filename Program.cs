@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CthuluMon
 {
@@ -8,49 +9,32 @@ namespace CthuluMon
         {
             Player Player = GetPlayer();
             Monster Monster1 = GenerateMonster();
-            Monster Monster2 = GenerateMonster();
-            Monster1.getInfo();
-            Monster2.getHealth();
-            Player.MindControl(Monster1, Monster2);
-            System.Console.WriteLine("Mind Controlling!");
-            Monster1.getHealth();
-            Monster2.getHealth();
-            
-            // System.Console.WriteLine($"A Monster {Monster1} appears! What would you like to do?");
-            // StartEncounter(Player);
+            ShowInventory(Player);
+            Player.HealingPotion(Monster1);
+            Player.HealingPotion(Monster1);
+            Player.HealingPotion(Monster1);
+            ShowInventory(Player);
+            Player.HealingPotion(Monster1);
+            ShowInventory(Player);
+            // Monster Monster2 = GenerateMonster();
+            // Monster1.getInfo();
+            // Monster2.getHealth();
+            // Player.MindControl(Monster1, Monster2);
+            // System.Console.WriteLine("Mind Controlling!");
+            // Monster1.getHealth();
+            // Monster2.getHealth();
+
         }
 
-        // public static void StartEncounter(Player _player){
-        //     Player Player = _player;
-        //     string InputLine = Console.ReadLine();
-        //     switch (InputLine){
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case "Run":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-
-        //         default:
-        //             break;
-        //     }
-        //     System.Console.WriteLine(InputLine);
-        // }
         public static Player GetPlayer(){
             Player Player = new Player();
             return Player;
+        }
+
+        public static void ShowInventory(Player player){
+            foreach(KeyValuePair<string, int> item in player.Inventory){
+                System.Console.WriteLine(item.Key+ ": " + item.Value);
+            }
         }
 
         public static Monster GenerateMonster(){

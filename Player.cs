@@ -15,8 +15,9 @@ namespace CthuluMon {
         public double Fortitude {get; set;}
         public double Charisma {get; set;}
         public double HP {get; set;}
-        public List<object> Inventory {get;set;}
+        public Dictionary<string, int> Inventory = new Dictionary<string, int>();
         public List<object> Party {get;set;}
+        public Dictionary<string, Delegate> MoveList = new Dictionary<string, Delegate>();
         
         public Player(){
             Random rand = new Random();
@@ -30,19 +31,23 @@ namespace CthuluMon {
             Fortitude = Math.Round((rand.NextDouble() * 15.0)+8, 2);
             Charisma = Math.Round((rand.NextDouble() * 15.0)+8, 2);
             HP = 100;
+            Inventory.Add("Healing Potion", 3);
+            Inventory.Add("Beer", 3);
+            Inventory.Add("Poison Bomb", 1);
+            Inventory.Add("Strength Potion", 1);
+            Inventory.Add("Constitution Potion", 1);
         }
 
         public void Attack(Monster target) {
-            target.HP -= (Constitution * 0.15 +(Strength*3));                        
+            target.HP -= (target.Constitution * 0.15 +(Strength*3));
         }
-
         public void MindControl(Monster target, Monster _target){
             Monster Target = target;
             Target.Attack(_target);
         }
 
         public void MindFlay(Monster target){
-            target.HP -= (target.Fortitude * 0.5 + (5 * this.Intelligence + (this.Wisdom * 0.15)));
+            target.HP -= (target.Fortitude * 0.3 + (5 * this.Intelligence + (this.Wisdom * 0.15)));
         }
 
         public void DarkBlessing(Monster target){
@@ -76,6 +81,62 @@ namespace CthuluMon {
                     target.HP = 0;
                     System.Console.WriteLine("You feast upon {0}!", target.Name);
                 }
+            }
+        }
+
+        public void HealingPotion(Monster target){
+            if(this.Inventory["Healing Potion"] > 0){
+                target.HP += 50;
+                System.Console.WriteLine($"{target.Name} was healed for {50}!");
+                this.Inventory["Healing Potion"] -= 1;
+            }
+            else {
+                System.Console.WriteLine("You have no healing potions left!");
+            }
+        }
+        public void PoisonBomb(Monster target){
+            if(this.Inventory["Poison Bomb"] > 0){
+                target.HP -= 50;
+                System.Console.WriteLine($"{target.Name} took {50} damage!");
+                this.Inventory["Poison Bomb"] -= 1;
+            }
+            else {
+                System.Console.WriteLine("You have no poision bombs left!");
+            }
+        }
+        public void Intoxicate(Monster target){
+            if (this.Inventory["Beer"] >0){
+                target.HP += 10;
+                target.Strength += 3;
+                target.Charisma += 3;
+                target.Dexterity -= 2;
+                target.Intelligence -= 2;
+                target.Wisdom -= 2;
+                System.Console.WriteLine($"{target.Name} became intoxicated. {target.Name}: {target.HP}{target.Strength}{target.Charisma}{target.Dexterity}{target.Intelligence}{target.Wisdom}");
+                this.Inventory["Beer"] -= 1;
+            }
+            else {
+                System.Console.WriteLine($"You have {this.Inventory["beer"]} beers left!");
+            }
+        }
+        public void StrengthPotion(Monster target){
+            if (this.Inventory["Strength Potion"] > 0){
+                target.Strength += 5;
+                System.Console.WriteLine($"{target.Name}'s strength was increased by {5}!");
+                this.Inventory["Strength Potion"] -= 1;
+            }
+            else {
+                System.Console.WriteLine("You have no strength potions left!");
+            }
+        }
+        public void ConstitutionPotion(Monster target){
+            if (this.Inventory["Constitution Potion"] > 0){
+                target.Strength += 5;
+                System.Console.WriteLine($"{target.Name}'s constitution was increased by {5}!");
+                this.Inventory["Constitution Potion"] -= 1;
+            }
+            else {
+                System.Console.WriteLine("You have no constitution potions left!");
             }
         }
 
