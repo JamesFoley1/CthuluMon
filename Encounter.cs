@@ -38,17 +38,17 @@ namespace CthuluMon{
 
             switch (choice){
                 case "attack":
-                    string[] moves = getMoveNames();
-                    List<Action> actions = getMoves();
+                    string[] moves = getMoves();
+                    List<Action> actions = getActions();
                     System.Console.WriteLine("Choose an attack!");
-                    foreach(string move in Monster.getMoves()){
+                    foreach(string move in moves{
                         System.Console.WriteLine(move);
                     }
                     string selectedMove = Console.ReadLine();
 
                     for(int i = 0; i < moves.Length ; i++){
                         if (selectedMove == moves[i]){
-                            actions[i](curMonster);
+                            actions[i]();
                         }
                     }
                     break;

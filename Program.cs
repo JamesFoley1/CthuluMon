@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CthuluMon
 {
@@ -23,28 +24,6 @@ namespace CthuluMon
             // StartEncounter(Player);
         }
 
-        // public static void StartEncounter(Player _player){
-        //     Player Player = _player;
-        //     string InputLine = Console.ReadLine();
-        //     switch (InputLine){
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case $"{}":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
-        //         case "Run":
-        //             System.Console.WriteLine("You ran away?! I am deeply ashamed.");
-        //             break;
 
         //         default:
         //             break;
@@ -56,8 +35,14 @@ namespace CthuluMon
         //     return Player;
         // }
 
+        public static void ShowInventory(Player player){
+            foreach(KeyValuePair<string, int> item in player.Inventory){
+                System.Console.WriteLine(item.Key+ ": " + item.Value);
+            }
+        }
+
         public static Monster GenerateMonster(){
-            Monster FSM = new Monster(1, "Flying Spaghetti Monster");
+            Monster FSM = new Monster("Flying Spaghetti Monster");
             getStats(FSM);
             return FSM;
         }
