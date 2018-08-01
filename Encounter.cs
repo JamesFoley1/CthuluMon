@@ -31,7 +31,7 @@ namespace CthuluMon{
                 }
             }
 
-            while(curMonster.HP < 0 && selectedMonster.HP < 0 ){
+            while(curMonster.HP > 0 && selectedMonster.HP > 0 ){
                 Turn();
 
             }
@@ -110,6 +110,21 @@ namespace CthuluMon{
                 default:
                     break;
             }
+
+            Random rand = new Random();
+            if( rand.Next(1,7) == 1 ) {
+                 curMonster.Attack(selectedMonster);
+            } else if( rand.Next(1,7) == 2 ) {
+              curMonster.KawaiiiClaw(selectedMonster);
+             } else if( rand.Next(1,7) == 3 ) {
+                  curMonster.GluttonousBite(selectedMonster);
+             }  else if( rand.Next(1,7) == 4  ) {
+                  curMonster.Ravage(selectedMonster);
+            } else if( rand.Next(1,7) == 5  ) {
+                  curMonster.HyruleSlash(selectedMonster);
+            } else {
+                   curMonster.MindRend(selectedMonster);
+             } 
 
         }
 
