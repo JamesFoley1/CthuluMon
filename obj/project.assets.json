@@ -677,7 +677,7 @@
       "outputPath": "/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "/Users/chrislange/.nuget/NuGet/NuGet.Config"

@@ -15,8 +15,7 @@ namespace CthuluMon {
         public double Fortitude {get; set;}
         public double Charisma {get; set;}
         public double HP {get; set;}
-
-        public Monster(int ID, string name) {
+        public Monster(string name) {
             this.Name = name;
             this.ID = ID;
             Random rand = new Random();
@@ -35,7 +34,25 @@ namespace CthuluMon {
         }
 
         public void Attack(Monster victim) {
-            victim.HP -= (Constitution * 0.15 +(Strength*3));                        
+            double damage = (victim.Constitution *0.15 -(this.Strength*3));
+            victim.HP -= (victim.Constitution * 0.15 -(Strength*3));
+            System.Console.WriteLine("{0} attacks, tooth and nail! {1} takes {2} damage.", this.Name, victim.Name, damage);                        
+        }
+
+        public void KawaiiiClaw(Monster victim) {
+            victim.HP -= (victim.Charisma *0.20 -(Dexterity*3));
+        }
+
+        public void GluttonousBite(Monster victim) {
+            victim.HP -= (Strength * 0.30 -(Strength*2));
+        }
+
+        public void Ravage(Monster victim) {
+            victim.HP -= (Strength *0.50 -(Strength*2));
+        }
+
+        public void MindRend(Monster victim) {
+            victim.HP -= (Charisma *0.35 -(Wisdom*3));
         }
 
         public void getInfo(){
@@ -52,6 +69,14 @@ namespace CthuluMon {
         public void getHealth(){
             System.Console.WriteLine(Name + HP);
         }
-
+        public static List<Monster> GenerateMonster(){
+            string[] Names = {"Byakyae", "Star-spawn", "Hello Kitty", "Dracolich", "Tzzensech", "Shoggoth"};
+            List<Monster> monsters = new List<Monster>();
+            for(int i = 0; i < 6; i++){
+                Monster monster = new Monster(Names[i]);
+                monsters.Add(monster);
+            }
+            return monsters;
+        }
     }
 }
