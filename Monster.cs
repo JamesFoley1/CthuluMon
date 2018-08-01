@@ -64,7 +64,7 @@ namespace CthuluMon {
         public void MindRend(Monster victim) {
             double damage = ((this.Wisdom*4) - (victim.Charisma*0.35));
             victim.HP -= damage;
-            System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage. {1} has {3} health remaining!", this.Name, victim.Name, damage, );
+            System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage. {1} has {3} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
         
         public void getInfo(){
