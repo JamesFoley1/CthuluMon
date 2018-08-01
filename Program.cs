@@ -6,7 +6,23 @@ namespace CthuluMon
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GenerateMonster();
+        }
+
+        public static void GenerateMonster(){
+            Monster FSM = new Monster(1, "Flying Spaghetti Monster");
+            getStats(FSM);
+        }
+
+        public static void getStats(Monster monster){
+            System.Console.WriteLine("Monster str: " + monster.Strength);
+            System.Console.WriteLine("Monster dex: " + monster.Dexterity);
+            System.Console.WriteLine("Monster con: " + monster.Constitution);
+            System.Console.WriteLine("Monster int: " + monster.Intelligence);
+            System.Console.WriteLine("Monster wis: " + monster.Wisdom);
+            System.Console.WriteLine("Monster fort: " + monster.Fortitude);
+            System.Console.WriteLine("Monster char: " + monster.Charisma);
+            System.Console.WriteLine("Monster Health: " + monster.HP);
         }
     }
 }

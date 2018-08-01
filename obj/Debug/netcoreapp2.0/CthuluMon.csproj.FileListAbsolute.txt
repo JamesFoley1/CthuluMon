@@ -1,0 +1,11 @@
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.deps.json
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.runtimeconfig.json
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.runtimeconfig.dev.json
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.dll
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.pdb
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.csprojResolveAssemblyReference.cache
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.csproj.CoreCompileInputs.cache
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfoInputs.cache
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfo.cs
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.dll
+/Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.pdb
