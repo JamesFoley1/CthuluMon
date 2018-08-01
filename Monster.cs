@@ -94,7 +94,7 @@ namespace CthuluMon {
             string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"};
             return Moves;
         }
-       
+
     }
 
 }
