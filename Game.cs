@@ -15,10 +15,43 @@ namespace CthuluMon{
 
         currentPlayer = new Player(inputName);
         while(currentPlayer.HP > 0){
-            Play play = new Play(currentPlayer);
-            play.Make_Choice();
-        }
+            Make_Choice();
+            }   
         
+        }
+
+        public void Make_Choice(){
+           
+            System.Console.WriteLine("What do you want to do? move, heal, or stats");
+
+            string choice = Console.ReadLine();
+
+            switch (choice) {
+                case "move":
+                    Move();
+                    break;
+                case "heal":
+                    // heal a pokemon
+                    break;
+                case "stats":
+                    // get pokemon stats
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        public void Move(){
+             Random rand = new Random();
+            if(rand.Next(1,11) < 3){
+                        //check for encounter
+                        System.Console.WriteLine("A pokemon appeared!");
+                        Encounter thisEncounter = new Encounter(currentPlayer);
+                        thisEncounter.StartEncounter();
+                    } else {
+                        Make_Choice();
+                    }
         }
     }
 }
