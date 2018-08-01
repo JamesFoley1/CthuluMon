@@ -32,7 +32,52 @@ namespace CthuluMon {
             HP = 100;
         }
 
+        public void Attack(Monster target) {
+            target.HP -= (Constitution * 0.15 +(Strength*3));                        
+        }
 
+        public void MindControl(Monster target, Monster _target){
+            Monster Target = target;
+            Target.Attack(_target);
+        }
+
+        public void MindFlay(Monster target){
+            target.HP -= (target.Fortitude * 0.5 + (5 * this.Intelligence + (this.Wisdom * 0.15)));
+        }
+
+        public void DarkBlessing(Monster target){
+            target.Strength += 3;
+            target.Dexterity += 3;
+            target.Constitution += 3;
+            target.Intelligence += 3;
+            target.Wisdom += 3;
+            target.Fortitude += 3;
+            target.Charisma += 3;
+            target.HP += 50;
+        }
+
+        public void DeathsCaress(Monster target){
+            Random rand = new Random();
+            if(target.HP <= 40){
+                if((rand.NextDouble() * 1.0 ) > 0.93){
+                    System.Console.WriteLine("Target Resisted Your grasp!");
+                }
+                else {
+                    if (this.HP+target.HP <= 100){
+                        this.HP += target.HP;
+                    }
+                    else if (this.HP + target.HP > 100){
+                        this.HP = 100;
+                    }
+                    else if(this.HP == 100){
+                        this.HP += (target.HP / 15);
+                        System.Console.WriteLine("Your hunger has been sated and have gained bonus health! {0}", this.HP);
+                    }
+                    target.HP = 0;
+                    System.Console.WriteLine("You feast upon {0}!", target.Name);
+                }
+            }
+        }
 
     }
 }

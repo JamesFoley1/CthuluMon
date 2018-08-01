@@ -8,7 +8,15 @@ namespace CthuluMon
         {
             Player Player = GetPlayer();
             Monster Monster1 = GenerateMonster();
-            System.Console.WriteLine($"A Monster {Monster1} appears! What would you like to do?");
+            Monster Monster2 = GenerateMonster();
+            Monster1.getInfo();
+            Monster2.getHealth();
+            Player.MindControl(Monster1, Monster2);
+            System.Console.WriteLine("Mind Controlling!");
+            Monster1.getHealth();
+            Monster2.getHealth();
+            
+            // System.Console.WriteLine($"A Monster {Monster1} appears! What would you like to do?");
             // StartEncounter(Player);
         }
 

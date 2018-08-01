@@ -35,7 +35,22 @@ namespace CthuluMon {
         }
 
         public void Attack(Monster victim) {
-            victim.HP -= Strength*5;                        
+            victim.HP -= (Constitution * 0.15 +(Strength*3));                        
+        }
+
+        public void getInfo(){
+            System.Console.WriteLine(Name);
+            System.Console.WriteLine("Monster str: " + Strength);
+            System.Console.WriteLine("Monster dex: " + Dexterity);
+            System.Console.WriteLine("Monster con: " + Constitution);
+            System.Console.WriteLine("Monster int: " + Intelligence);
+            System.Console.WriteLine("Monster wis: " + Wisdom);
+            System.Console.WriteLine("Monster fort: " + Fortitude);
+            System.Console.WriteLine("Monster char: " + Charisma);
+            System.Console.WriteLine("Monster Health: " + HP);
+        }
+        public void getHealth(){
+            System.Console.WriteLine(Name + HP);
         }
 
     }
