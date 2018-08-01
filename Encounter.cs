@@ -38,19 +38,19 @@ namespace CthuluMon{
 
             switch (choice){
                 case "attack":
-                    string[] moves = getMoves();
-                    List<Action> actions = getActions();
+                    string[] moves = Monster.getMoves();
+                    // List<Action> actions = getActions();
                     System.Console.WriteLine("Choose an attack!");
-                    foreach(string move in moves{
+                    foreach(string move in moves){
                         System.Console.WriteLine(move);
                     }
                     string selectedMove = Console.ReadLine();
 
-                    for(int i = 0; i < moves.Length ; i++){
-                        if (selectedMove == moves[i]){
-                            actions[i]();
-                        }
-                    }
+                    // for(int i = 0; i < moves.Length ; i++){
+                    //     if (selectedMove == moves[i]){
+                    //         actions[i]();
+                    //     }
+                    // }
                     break;
                 case "item": 
                     foreach (KeyValuePair<string,int> entry in curPlayer.Inventory){

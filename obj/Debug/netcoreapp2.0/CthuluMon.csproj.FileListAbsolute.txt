@@ -20,3 +20,14 @@
 /Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfo.cs
 /Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.dll
 /Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.pdb
+C:\Users\kylec\Desktop\Csharp\CthuluMon\bin\Debug\netcoreapp2.0\CthuluMon.deps.json
+C:\Users\kylec\Desktop\Csharp\CthuluMon\bin\Debug\netcoreapp2.0\CthuluMon.runtimeconfig.json
+C:\Users\kylec\Desktop\Csharp\CthuluMon\bin\Debug\netcoreapp2.0\CthuluMon.runtimeconfig.dev.json
+C:\Users\kylec\Desktop\Csharp\CthuluMon\bin\Debug\netcoreapp2.0\CthuluMon.dll
+C:\Users\kylec\Desktop\Csharp\CthuluMon\bin\Debug\netcoreapp2.0\CthuluMon.pdb
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.csprojResolveAssemblyReference.cache
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.csproj.CoreCompileInputs.cache
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.AssemblyInfoInputs.cache
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.AssemblyInfo.cs
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.dll
+C:\Users\kylec\Desktop\Csharp\CthuluMon\obj\Debug\netcoreapp2.0\CthuluMon.pdb
