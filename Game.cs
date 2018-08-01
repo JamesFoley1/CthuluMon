@@ -38,7 +38,7 @@ namespace CthuluMon{
 
             switch (choice) {
                 case "move":
-                    Move();
+                    Move(currentPlayer);
                     break;
                 case "heal":
                     Heal();
@@ -56,11 +56,13 @@ namespace CthuluMon{
 
         }
 
-        public void Move(){
-             Random rand = new Random();
+        public void Move(Player player){
+            Random rand = new Random();
+            player.Distance += 1;
+            System.Console.WriteLine($"{player.Name} has walked {player.Distance} steps down a darker path. Fhtang!");
             if(rand.Next(1,11) < 5){
                         //check for encounter
-                        System.Console.WriteLine("A pokemon appeared!");
+                        System.Console.WriteLine($"A wild {currentTeam[3]} appeared!");
                         Encounter thisEncounter = new Encounter(currentPlayer, currentTeam, currentTeam[3]);
                         thisEncounter.StartEncounter();
                     } else {

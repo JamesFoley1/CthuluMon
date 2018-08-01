@@ -34,37 +34,37 @@ namespace CthuluMon {
         public void Attack(Monster victim) {
             double damage = ((this.Strength*3) - (victim.Constitution *0.15));
             victim.HP -= (victim.Constitution * 0.15 - (this.Strength*3));
-            System.Console.WriteLine("{0} attacks, tooth and nail! {1} takes {2} damage.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} attacks, tooth and nail! {1} takes {2} damage. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
 
         public void KawaiiiClaw(Monster victim) {
             double damage = ((this.Strength*3) + (victim.Charisma *0.15));
             victim.HP -= (victim.Charisma *0.20 - (this.Dexterity*3));
-            System.Console.WriteLine("{0} lunges at your throat, bearing claws both sinister and kawaiiiiii! {1} takes {2} damage.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} lunges at your throat, bearing claws both sinister and kawaiiiiii! {1} takes {2} damage. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
 
         public void GluttonousBite(Monster victim) {
             double damage = ((this.Strength*2) + (victim.Strength*0.30));
             victim.HP -= (victim.Strength * 0.30 - (this.Strength*2));
-            System.Console.WriteLine("{0} dislodges their lower jaw, sinking its jagged, rotten teeth into {1}'s shoulder with a wet crunch. {1} feels {2} HP rip away with a sickening groan.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} dislodges their lower jaw, sinking its jagged, rotten teeth into {1}'s shoulder with a wet crunch. {1} feels {2} HP rip away with a sickening groan. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
 
         public void Ravage(Monster victim) {
             double damage = ((this.Strength*2) + (victim.Dexterity*0.50));
             victim.HP -= (victim.Dexterity *0.50) - (this.Strength*2);
-            System.Console.WriteLine("{0} launches itself towards {1}, lashing out with wild, savage swings. A dull crunch and wet, gutteral sob of victory break the eerie silence as {1} takes {2} damage.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} launches itself towards {1}, lashing out with wild, savage swings. A dull crunch and wet, gutteral sob of victory break the eerie silence as {1} takes {2} damage. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
 
         public void HyruleSlash(Monster victim) {
             double damage = ((this.Dexterity*3) + (victim.Constitution*0.35));
             victim.HP -= ((victim.Constitution*0.35) - (this.Dexterity*3));
-            System.Console.WriteLine("{0} draws a longsword bearing the emblem of a fallen warrior, the blade chipped and rusted. Falling beneath a whirlwind of blows, {1} takes {2} damage.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} draws a longsword bearing the emblem of a fallen warrior, the blade chipped and rusted. Falling beneath a whirlwind of blows, {1} takes {2} damage. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
 
         public void MindRend(Monster victim) {
             double damage = ((this.Wisdom*4) + (victim.Charisma*0.35));
             victim.HP -= (Charisma *0.35) - (this.Wisdom*4);
-            System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage.", this.Name, victim.Name, damage);
+            System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage. {1} has {4} health remaining!", this.Name, victim.Name, damage, victim.HP);
         }
         
         public void getInfo(){
@@ -94,7 +94,7 @@ namespace CthuluMon {
             string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"};
             return Moves;
         }
-       
+
     }
 
 }
