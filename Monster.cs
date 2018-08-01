@@ -15,6 +15,7 @@ namespace CthuluMon {
         public double Fortitude {get; set;}
         public double Charisma {get; set;}
         public double HP {get; set;}
+        public List<Monster> monsters = new List<Monster>();
 
         public Monster(int ID, string name) {
             this.Name = name;
@@ -53,5 +54,11 @@ namespace CthuluMon {
             System.Console.WriteLine(Name + HP);
         }
 
+
+
+
+        
+
     }
+
 }

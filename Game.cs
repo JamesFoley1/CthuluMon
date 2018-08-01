@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace CthuluMon{
     public class Game {
         public string Gender;
         public Player currentPlayer;
+        public List<Monster> currentTeam = new List<Monster>();
         public string[] options = {"move", "heal", "stats"};
 
     public void startGame()
@@ -14,6 +16,13 @@ namespace CthuluMon{
         System.Console.WriteLine($"Well it's great to meet you {inputName}! CthuluMon are mysterious and terrifying creatures. Let's catch 'em all!");
 
         currentPlayer = new Player(inputName);
+
+        // currentTeam = Monster.GenerateMonster();
+        for(int i = 0; i < 4; i++){
+           Monster monster =  new Monster(0,"Bob");
+           currentTeam.Add(monster);
+        }
+
         while(currentPlayer.HP > 0){
             Make_Choice();
             }   
@@ -47,7 +56,7 @@ namespace CthuluMon{
             if(rand.Next(1,11) < 3){
                         //check for encounter
                         System.Console.WriteLine("A pokemon appeared!");
-                        Encounter thisEncounter = new Encounter(currentPlayer);
+                        Encounter thisEncounter = new Encounter(currentPlayer, currentTeam);
                         thisEncounter.StartEncounter();
                     } else {
                         Make_Choice();

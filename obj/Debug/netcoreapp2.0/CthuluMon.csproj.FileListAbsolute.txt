@@ -9,3 +9,14 @@
 /Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfo.cs
 /Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.dll
 /Users/PickleRick/Desktop/CD_C#/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.pdb
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.deps.json
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.runtimeconfig.json
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.runtimeconfig.dev.json
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.dll
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/bin/Debug/netcoreapp2.0/CthuluMon.pdb
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.csprojResolveAssemblyReference.cache
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.csproj.CoreCompileInputs.cache
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfoInputs.cache
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.AssemblyInfo.cs
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.dll
+/Users/chrislange/Documents/CodeDojo/CSharp Class/CthuluMon/obj/Debug/netcoreapp2.0/CthuluMon.pdb
