@@ -111,20 +111,21 @@ namespace CthuluMon{
                     break;
             }
 
-            Random rand = new Random();
-            if( rand.Next(1,7) == 1 ) {
-                 curMonster.Attack(selectedMonster);
-            } else if( rand.Next(1,7) == 2 ) {
-              curMonster.KawaiiiClaw(selectedMonster);
-             } else if( rand.Next(1,7) == 3 ) {
-                  curMonster.GluttonousBite(selectedMonster);
-             }  else if( rand.Next(1,7) == 4  ) {
-                  curMonster.Ravage(selectedMonster);
-            } else if( rand.Next(1,7) == 5  ) {
-                  curMonster.HyruleSlash(selectedMonster);
+            Random num = new Random();
+            int newNum = num.Next(0,7);
+            if( newNum == 1 ) {
+                curMonster.Attack(selectedMonster);
+            } else if( newNum == 2 ) {
+                curMonster.KawaiiiClaw(selectedMonster);
+            } else if( newNum == 3 ) {
+                curMonster.GluttonousBite(selectedMonster);
+            }  else if( newNum == 4  ) {
+                curMonster.Ravage(selectedMonster);
+            } else if( newNum == 5  ) {
+                curMonster.HyruleSlash(selectedMonster);
             } else {
-                   curMonster.MindRend(selectedMonster);
-             } 
+                curMonster.MindRend(selectedMonster);
+            } 
 
         }
 

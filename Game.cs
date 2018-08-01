@@ -62,7 +62,7 @@ namespace CthuluMon{
             System.Console.WriteLine($"{player.Name} has walked {player.Distance} steps down a darker path. Fhtang!");
             if(rand.Next(1,11) < 5){
                         //check for encounter
-                        System.Console.WriteLine($"A wild {currentTeam[3]} appeared!");
+                        System.Console.WriteLine($"A wild {currentTeam[3].Name} appeared!");
                         Encounter thisEncounter = new Encounter(currentPlayer, currentTeam, currentTeam[3]);
                         thisEncounter.StartEncounter();
                     } else {
