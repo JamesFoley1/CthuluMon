@@ -6,6 +6,8 @@ namespace CthuluMon
     {
         static void Main(string[] args)
         {
+            Player Player = GetPlayer();
+            Monster Monster1 = GenerateMonster();
 
         }
 
@@ -13,6 +15,12 @@ namespace CthuluMon
         public static Player GetPlayer(){
             Player Player = new Player();
             return Player;
+        }
+
+        public static Monster GenerateMonster(){
+            Monster FSM = new Monster(1, "Flying Spaghetti Monster");
+            getStats(FSM);
+            return FSM;
         }
 
         public static void getStats(Monster monster){
