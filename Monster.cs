@@ -57,12 +57,12 @@ namespace CthuluMon {
 
         public void HyruleSlash(Monster victim) {
             double damage = ((this.Dexterity*3) + (victim.Constitution*0.35));
-            victim.HP -= (victim.Constitution*0.35) - (this.Dexterity*3));
+            victim.HP -= ((victim.Constitution*0.35) - (this.Dexterity*3));
             System.Console.WriteLine("{0} draws a longsword bearing the emblem of a fallen warrior, the blade chipped and rusted. Falling beneath a whirlwind of blows, {1} takes {2} damage.", this.Name, victim.Name, damage);
         }
 
         public void MindRend(Monster victim) {
-            double damage = ((this.Wisdom*4) + (victim.Charisma*0.35))
+            double damage = ((this.Wisdom*4) + (victim.Charisma*0.35));
             victim.HP -= (Charisma *0.35 - (this.Wisdom*4));
             System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage.", this.Name, victim.Name, damage);
         }
@@ -91,8 +91,8 @@ namespace CthuluMon {
             return monsters;
         }
         public static string[] getMoves(){
-            string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"}
+            string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"};
+            return Moves;
         }
-        return Moves;
     }
 }
