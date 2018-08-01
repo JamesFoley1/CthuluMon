@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace CthuluMon {
 
     public class Player {
-        private string Name = "Cthulu";
+        private string Name {get; set;}
         public string Race {get; set;}
         public double Distance {get; set;}
         public double Strength {get; set;}

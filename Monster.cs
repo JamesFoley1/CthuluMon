@@ -4,7 +4,6 @@ using System.Collections.Generic;
 namespace CthuluMon {
     public class Monster {
         public string Name {get; set;}
-        public int ID {get; set;}
         public string Race {get; set;}
         public double Distance {get; set;}
         public double Strength {get; set;}
@@ -15,10 +14,8 @@ namespace CthuluMon {
         public double Fortitude {get; set;}
         public double Charisma {get; set;}
         public double HP {get; set;}
-
-        public Monster(int ID, string name) {
+        public Monster(string name) {
             this.Name = name;
-            this.ID = ID;
             Random rand = new Random();
             Strength = Math.Round((rand.NextDouble() * 20.0)+5, 2);
             Dexterity = Math.Round((rand.NextDouble() * 20.0)+5, 2);
@@ -35,7 +32,39 @@ namespace CthuluMon {
         }
 
         public void Attack(Monster victim) {
-            victim.HP -= (Constitution * 0.15 +(Strength*3));                        
+            double damage = ((this.Strength*3) - (victim.Constitution *0.15));
+            victim.HP -= (victim.Constitution * 0.15 - (this.Strength*3));
+            System.Console.WriteLine("{0} attacks, tooth and nail! {1} takes {2} damage.", this.Name, victim.Name, damage);
+        }
+
+        public void KawaiiiClaw(Monster victim) {
+            double damage = ((this.Strength*3) + (victim.Charisma *0.15));
+            victim.HP -= (victim.Charisma *0.20 - (this.Dexterity*3));
+            System.Console.WriteLine("{0} lunges at your throat, bearing claws both sinister and kawaiiiiii! {1} takes {2} damage.", this.Name, victim.Name, damage);
+        }
+
+        public void GluttonousBite(Monster victim) {
+            double damage = ((this.Strength*2) + (victim.Strength*0.30));
+            victim.HP -= (victim.Strength * 0.30 - (this.Strength*2));
+            System.Console.WriteLine("{0} dislodges their lower jaw, sinking its jagged, rotten teeth into {1}'s shoulder with a wet crunch. {1} feels {2} HP rip away with a sickening groan.", this.Name, victim.Name, damage);
+        }
+
+        public void Ravage(Monster victim) {
+            double damage = ((this.Strength*2) + (victim.Dexterity*0.50));
+            victim.HP -= (victim.Dexterity *0.50 - (this.Strength*2));
+            System.Console.WriteLine("{0} launches itself towards {1}, lashing out with wild, savage swings. A dull crunch and wet, gutteral sob of victory break the eerie silence as {1} takes {2} damage.", this.Name, victim.Name, damage);
+        }
+
+        public void HyruleSlash(Monster victim) {
+            double damage = ((this.Dexterity*3) + (victim.Constitution*0.35));
+            victim.HP -= (victim.Constitution*0.35) - (this.Dexterity*3));
+            System.Console.WriteLine("{0} draws a longsword bearing the emblem of a fallen warrior, the blade chipped and rusted. Falling beneath a whirlwind of blows, {1} takes {2} damage.", this.Name, victim.Name, damage);
+        }
+
+        public void MindRend(Monster victim) {
+            double damage = ((this.Wisdom*4) + (victim.Charisma*0.35))
+            victim.HP -= (Charisma *0.35 - (this.Wisdom*4));
+            System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage.", this.Name, victim.Name, damage);
         }
         
         public void getInfo(){
@@ -52,6 +81,18 @@ namespace CthuluMon {
         public void getHealth(){
             System.Console.WriteLine(Name + HP);
         }
-
+        public static List<Monster> GenerateMonster(){
+            string[] Names = {"Byakyae", "Star-spawn", "Hello Kitty", "Dracolich", "Tzzensech", "Shoggoth"};
+            List<Monster> monsters = new List<Monster>();
+            for(int i = 0; i < 6; i++){
+                Monster monster = new Monster(Names[i]);
+                monsters.Add(monster);
+            }
+            return monsters;
+        }
+        public static string[] getMoves(){
+            string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"}
+        }
+        return Moves;
     }
 }

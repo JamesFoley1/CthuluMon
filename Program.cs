@@ -9,22 +9,9 @@ namespace CthuluMon
         {
             Player Player = GetPlayer();
             Monster Monster1 = GenerateMonster();
-            ShowInventory(Player);
-            Player.HealingPotion(Monster1);
-            Player.HealingPotion(Monster1);
-            Player.HealingPotion(Monster1);
-            ShowInventory(Player);
-            Player.HealingPotion(Monster1);
-            ShowInventory(Player);
-            // Monster Monster2 = GenerateMonster();
-            // Monster1.getInfo();
-            // Monster2.getHealth();
-            // Player.MindControl(Monster1, Monster2);
-            // System.Console.WriteLine("Mind Controlling!");
-            // Monster1.getHealth();
-            // Monster2.getHealth();
 
         }
+
 
         public static Player GetPlayer(){
             Player Player = new Player();
@@ -38,7 +25,7 @@ namespace CthuluMon
         }
 
         public static Monster GenerateMonster(){
-            Monster FSM = new Monster(1, "Flying Spaghetti Monster");
+            Monster FSM = new Monster("Flying Spaghetti Monster");
             getStats(FSM);
             return FSM;
         }
