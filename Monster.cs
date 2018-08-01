@@ -51,7 +51,7 @@ namespace CthuluMon {
 
         public void Ravage(Monster victim) {
             double damage = ((this.Strength*2) + (victim.Dexterity*0.50));
-            victim.HP -= (victim.Dexterity *0.50 - (this.Strength*2));
+            victim.HP -= (victim.Dexterity *0.50) - (this.Strength*2);
             System.Console.WriteLine("{0} launches itself towards {1}, lashing out with wild, savage swings. A dull crunch and wet, gutteral sob of victory break the eerie silence as {1} takes {2} damage.", this.Name, victim.Name, damage);
         }
 
@@ -63,7 +63,7 @@ namespace CthuluMon {
 
         public void MindRend(Monster victim) {
             double damage = ((this.Wisdom*4) + (victim.Charisma*0.35));
-            victim.HP -= (Charisma *0.35 - (this.Wisdom*4));
+            victim.HP -= (Charisma *0.35) - (this.Wisdom*4);
             System.Console.WriteLine("{0} folds their hands and hums a single, deeply resonant chant. The center of {0}'s forehead splits open, revealing an eye with a black iris and radiant violet pupil. Looking upon {1}, the eye reveals the terrible future, a dark truth of what has yet to come. Crumpling to the ground, sobbing, {1} takes {2} damage.", this.Name, victim.Name, damage);
         }
         
@@ -94,5 +94,7 @@ namespace CthuluMon {
             string[] Moves = {"Attack", "KawaiiiClaw", "GlutonousBite", "Ravage", "HyruleSlash", "MindRend"};
             return Moves;
         }
+       
     }
+
 }
