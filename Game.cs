@@ -17,11 +17,12 @@ namespace CthuluMon{
 
         currentPlayer = new Player(inputName);
 
-        currentTeam = Monster.GenerateMonster();
+        // // currentTeam = Monster.GenerateMonster();
         // for(int i = 0; i < 4; i++){
-        //    Monster monster =  new Monster("Bob");
+        //    Monster monster =  new Monster(0,"Bob");
         //    currentTeam.Add(monster);
         // }
+        currentTeam = Monster.GenerateMonster();
 
         while(currentPlayer.HP > 0){
             Make_Choice();
@@ -40,9 +41,13 @@ namespace CthuluMon{
                     Move();
                     break;
                 case "heal":
+                    Heal();
                     // heal a pokemon
                     break;
                 case "stats":
+                    foreach(Monster monster in currentTeam){
+                        Program.getStats(monster);
+                    }
                     // get pokemon stats
                     break;
                 default:
@@ -53,7 +58,7 @@ namespace CthuluMon{
 
         public void Move(){
              Random rand = new Random();
-            if(rand.Next(1,11) < 3){
+            if(rand.Next(1,11) < 5){
                         //check for encounter
                         System.Console.WriteLine("A pokemon appeared!");
                         Encounter thisEncounter = new Encounter(currentPlayer, currentTeam, currentTeam[3]);
@@ -61,6 +66,13 @@ namespace CthuluMon{
                     } else {
                         Make_Choice();
                     }
+        }
+        public void Heal(){
+            foreach(Monster monster in currentTeam){
+                Random randHeal = new Random();
+                monster.HP += randHeal.Next(40);
+            }
+        System.Console.WriteLine($"Invoking the dark powers which brought them to this forsaken realm, {currentPlayer.Name} call forth unholy energies to revitalize their demonic minions.");
         }
     }
 }
