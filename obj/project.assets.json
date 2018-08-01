@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\CthuluMon.csproj",
+      "projectUniqueName": "C:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\CthuluMon.csproj",
       "projectName": "CthuluMon",
-      "projectPath": "c:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\CthuluMon.csproj",
+      "projectPath": "C:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\CthuluMon.csproj",
       "packagesPath": "C:\\Users\\kylec\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\obj\\",
+      "outputPath": "C:\\Users\\kylec\\Desktop\\Csharp\\CthuluMon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
