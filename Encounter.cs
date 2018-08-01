@@ -31,7 +31,7 @@ namespace CthuluMon{
                 }
             }
 
-            while(curMonster.HP < 0 && selectedMonster.HP < 0 ){
+            while(curMonster.HP > 0 && selectedMonster.HP > 0 ){
                 Turn();
 
             }
