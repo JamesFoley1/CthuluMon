@@ -19,7 +19,8 @@ namespace CthuluMon {
         public List<object> Party {get;set;}
         public Dictionary<string, Delegate> MoveList = new Dictionary<string, Delegate>();
         
-        public Player(){
+        public Player(string name){
+            Name = name;
             Random rand = new Random();
             Race = "Elder One";
             Distance = 0.0;

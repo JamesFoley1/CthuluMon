@@ -17,11 +17,11 @@ namespace CthuluMon{
 
         currentPlayer = new Player(inputName);
 
-        // currentTeam = Monster.GenerateMonster();
-        for(int i = 0; i < 4; i++){
-           Monster monster =  new Monster(0,"Bob");
-           currentTeam.Add(monster);
-        }
+        currentTeam = Monster.GenerateMonster();
+        // for(int i = 0; i < 4; i++){
+        //    Monster monster =  new Monster("Bob");
+        //    currentTeam.Add(monster);
+        // }
 
         while(currentPlayer.HP > 0){
             Make_Choice();
@@ -56,7 +56,7 @@ namespace CthuluMon{
             if(rand.Next(1,11) < 3){
                         //check for encounter
                         System.Console.WriteLine("A pokemon appeared!");
-                        Encounter thisEncounter = new Encounter(currentPlayer, currentTeam);
+                        Encounter thisEncounter = new Encounter(currentPlayer, currentTeam, currentTeam[3]);
                         thisEncounter.StartEncounter();
                     } else {
                         Make_Choice();
