@@ -6,6 +6,8 @@ namespace CthuluMon
     {
         static void Main(string[] args)
         {
+
+
             Player Player = GetPlayer();
             Monster Monster1 = GenerateMonster();
             Monster Monster2 = GenerateMonster();
@@ -49,7 +51,7 @@ namespace CthuluMon
         //     System.Console.WriteLine(InputLine);
         // }
         public static Player GetPlayer(){
-            Player Player = new Player();
+            Player Player = new Player("Player");
             return Player;
         }
 
